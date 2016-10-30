@@ -1,5 +1,4 @@
 from sqlalchemy import BigInteger, Boolean, Column, DateTime, Float, Integer, String, Text, func
-from sqlalchemy.dialects import postgresql
 
 from app.work_agenda_db_connection import work_agenda_base
 
