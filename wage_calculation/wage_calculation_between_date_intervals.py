@@ -7,6 +7,7 @@ def wage_calculation_between_date_intervals(start_date, end_date, weekly_working
 
     wage = 0.0
     for item in weekly_working_schedule_and_rates:
-        wage += item.duration_in_hours*item.charge_in_euros*weekdays_count[item.weekday]
+        if item.weekday in weekdays_count:
+            wage += item.duration_in_hours*item.charge_in_euros*weekdays_count[item.weekday]
 
     return wage
